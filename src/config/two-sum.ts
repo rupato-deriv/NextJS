@@ -25,7 +25,7 @@ export const labelStyles = "block text-sm font-medium mb-1";
  * Button styles
  */
 export const buttonStyles = {
-  primary: "bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors",
+  primary: "bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-3 rounded-md transition-colors shadow-md",
   secondary: "bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-3 rounded-md transition-colors shadow-md"
 };
 
