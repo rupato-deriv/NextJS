@@ -20,7 +20,7 @@ export function parseInputArray(input: string): number[] {
       throw new Error("Input must be an array");
     }
     
-    if (!parsedArray.every((num: any) => typeof num === 'number')) {
+    if (!parsedArray.every((num: unknown) => typeof num === 'number')) {
       throw new Error("All array elements must be numbers");
     }
     
@@ -32,8 +32,8 @@ export function parseInputArray(input: string): number[] {
     }
     
     return parsedArray;
-  } catch (error: any) {
-    if (error.message.includes("JSON")) {
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message.includes("JSON")) {
       throw new Error("Invalid array format. Please use format like [1, 2, 3]");
     }
     throw error;

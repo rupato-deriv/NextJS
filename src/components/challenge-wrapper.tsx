@@ -19,7 +19,7 @@ export default function ChallengeWrapper({ challengeId }: ChallengeWrapperProps)
       <div className="min-h-screen flex items-center justify-center">
         <div className="bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-2">Challenge Not Found</h2>
-          <p>The challenge "{challengeId}" does not exist.</p>
+          <p>The challenge &quot;{challengeId}&quot; does not exist.</p>
         </div>
       </div>
     );
