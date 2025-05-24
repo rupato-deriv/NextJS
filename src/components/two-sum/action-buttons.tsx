@@ -25,7 +25,7 @@ export default function ActionButtons({ onSolve, onLoadExample }: ActionButtonsP
             onClick={() => onLoadExample(index)}
             className={buttonStyles.secondary}
           >
-            Example {index + 1}
+            Ex: {index + 1}
           </button>
         ))}
       </div>
