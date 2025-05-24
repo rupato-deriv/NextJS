@@ -1,12 +1,29 @@
 import { notFound } from "next/navigation";
 import ChallengeWrapper from "@/components/challenge-wrapper";
 import { getChallengeById } from "@/config/challenges";
+import { Metadata } from "next";
 
-interface ChallengePageProps {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const challenge = getChallengeById(params.id);
+  
+  if (!challenge) {
+    return {
+      title: "Challenge Not Found",
+    };
+  }
+  
+  return {
+    title: `${challenge.name} | NextJS Challenges`,
+    description: `Interactive ${challenge.name} challenge built with Next.js`,
+  };
+}
+
+type ChallengePageProps = {
   params: {
     id: string;
   };
-}
+  searchParams: Record<string, string | string[] | undefined>;
+};
 
 /**
  * Dynamic page component for individual challenges
