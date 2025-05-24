@@ -11,14 +11,13 @@ interface ActionButtonsProps {
 export default function ActionButtons({ onSolve, onLoadExample }: ActionButtonsProps) {
   return (
     <div className="flex flex-wrap space-x-4 mb-6">
-      <button
-        onClick={onSolve}
-        className={buttonStyles.primary}
-      >
-        Solve
-      </button>
-
       <div className="flex space-x-2">
+        <button
+          onClick={onSolve}
+          className={buttonStyles.primary}
+        >
+          Solve
+        </button>
         {examples.map((_, index) => (
           <button
             key={index}
