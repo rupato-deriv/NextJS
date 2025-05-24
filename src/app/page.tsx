@@ -10,7 +10,7 @@ export default function Home() {
         {challenges.map((challenge, index) => (
           <Link 
             key={challenge.id}
-            href={challenge.path} 
+            href={challenge.path || '#'} 
             className="p-6 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             <h2 className="text-2xl font-semibold mb-2">Challenge {index + 1}</h2>

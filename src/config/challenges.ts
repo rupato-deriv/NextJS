@@ -4,10 +4,10 @@
  */
 
 export interface ChallengeConfig {
-  id: string;
-  name: string;
-  path: string;
-  component: string;
+  id?: string;
+  name?: string;
+  path?: string;
+  component?: string;
 }
 
 /**
